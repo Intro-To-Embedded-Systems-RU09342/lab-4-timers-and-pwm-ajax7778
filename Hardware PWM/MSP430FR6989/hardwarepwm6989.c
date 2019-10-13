@@ -26,7 +26,6 @@ int main(void)
     TA0CTL |= TASSEL_2; //use SMCLK, Timer A0 set up for PWM
     TA0CTL |= MC_1; //up mode
     TA0CCR0 = 999; //1000 Hz PWM
-    //TA0CCR1 = 499; //start at 50% duty cycle
     TA0CCTL1 |= OUTMOD_7; // resets output at CCR0, sets output at CCR1
 
     __bis_SR_register(LPM0_bits + GIE); //enter LPM 0 and enable interrupts
