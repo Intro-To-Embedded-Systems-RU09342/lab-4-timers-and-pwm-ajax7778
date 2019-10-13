@@ -11,6 +11,12 @@ You'll likely want to hook up your buttons on the development boards to an oscil
 to settle. The idea here is that your processor should be able to run other code, while relying on timers and interrupts to manage the 
 debouncing in the background. *You should not be using polling techniques for this assignment.
 
+## MSP430FR6989
+This board's debouncing code was written in a much more organized way than the G2 code. Instead of writing the entire code within
+the vector, it was made sure that everything necessary for debouncing was initialized before the start of the interrupt vector.
+This included the LED, button, and Timer parameters. This meant that all that needed to be done in the vectors was toggling the button
+and starting/stopping the timer. 
+
 ## MSP430G2553
 Debouncing is very important in coding because it allows for more reliable button presses. A lot of times, a button press can mess up,
 and toggle multiple times or no times at all when pressed. This creates false positives and false negatives. Debouncing makes it less
