@@ -16,4 +16,4 @@ brighter, the LED turns off, and the cycle restarts. It increases by 10% every b
 ## MSP430G2553
 The G2 board is the same as the 6989, in that the duty cycle increases with every button press. The only differences included for this 
 board was that the G2 PWM started at 50% brightness before increasing to 100%, then turning off and increasing once again by increments
-of 10% for each button press. 
+of 10% for each button press. For this board, the red LED (the right one) is the one attached to the PWM and the green LED (left) tracks the button presses.
