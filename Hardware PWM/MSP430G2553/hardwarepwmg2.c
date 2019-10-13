@@ -8,10 +8,10 @@ int main(void)
 
     P1DIR |= BIT0 + BIT6;  //sets pin1.0 and pin1.6 to output
     P1SEL |= BIT6;        //P1.6 set as PWM
-    P1OUT =  BIT3;        //P1.3 pullup
-    P1REN |= BIT3;        //enables P1.3 resistor
+    P1OUT =  BIT3;        //P1.3 pull up
+    P1REN |= BIT3;        //enables P1.3 pull up resistor
     P1IE |= BIT3;         //enables P1.3 interrupt
-    P1IES |= BIT3;        //interrupt generates on the high low
+    P1IES |= BIT3;        //interrupt generates on the button press
     P1IFG &= ~BIT3;       //flag set off at pin1.3
 
     TA0CCR0 = 1000;       //1kHz period
